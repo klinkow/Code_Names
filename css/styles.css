@@ -1,0 +1,106 @@
+.grid {
+}
+
+.cell {
+
+}
+
+#turnIdentifier {
+  width: 30px;
+  height: 30px;
+  background-color: #FF0000;
+  margin: 0 auto;
+}
+
+/* IMPORTED STYLESHEET */
+
+.btn {
+  /*background-color: #c1c1c1;*/
+  border-radius: 0px;
+}
+.btn:active {background-color: #474747;}
+.btn:focus, .btn:active {
+
+  /* Eliminates the default blue outline when the button is clicked. */
+  outline: none !important;
+}
+
+.btn-roll {
+  align: center;
+}
+
+/* CUSTOM BUTTONS */
+/* This section handles the general SELECTOR buttons*/
+
+.btn-gray{
+  border: solid 1px #000;
+
+  -moz-background-image: -moz-linear-gradient(top left, #c9c9c9 0%, #6f6f6f 100%);
+  -webkit-background-image: -webkit-linear-gradient(top left, #c9c9c9 0%, #6f6f6f 100%);
+  background-image: linear-gradient(to bottom right, #c9c9c9 0%, #6f6f6f 100%);
+  background-image-slice: 1;
+}
+.btn-gray:hover { margin-right: 3px; margin-bottom: 5px; box-shadow: 3px 5px 16px 0 #404040; transition: all 0.25s ease 0s;}
+.btn-gray:active {
+  box-shadow: 0px 0px 0px 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  transition: all 0.05s ease 0s;
+
+  -moz-background-image: -moz-linear-gradient(top left, #8a8a8a 0%, #474747 100%);
+  -webkit-background-image: -webkit-linear-gradient(top left, #8a8a8a 0%, #474747 100%);
+  background-image: linear-gradient(to bottom right, #8a8a8a 0%, #474747 100%);
+  background-image-slice: 1;
+}
+
+.btn-image {
+  border: solid 1px #A9A9A9;
+  background-color: #A9A9A9;
+}
+.btn-image:active {
+  background-color: #A9A9A9;
+  /* Eliminates the appearance of pressing the button object that surrounds
+  the image to which that appearance has been deferred.*/
+  box-shadow: 0px 0px 0px 0px;
+}
+.btn-image:active > img {
+  box-shadow: 0px 0px 0px 0px;
+  margin-left: 0px;
+  margin-top: 0px;
+  transition: all 0.05s ease 0s;
+
+  -moz-background-image: -moz-linear-gradient(top left, #8a8a8a 0%, #474747 100%);
+  -webkit-background-image: -webkit-linear-gradient(top left, #8a8a8a 0%, #474747 100%);
+  background-image: linear-gradient(to bottom right, #8a8a8a 0%, #474747 100%);
+  background-image-slice: 1;
+}
+
+.btn-image:hover > img {
+    transition: all 0.30s ease 0s;
+}
+
+.jumbotron {
+  background-color: #A9A9A9;
+  color: #000;
+
+  /*text-align: center;*/
+
+  margin: 10px;
+  margin-bottom: 24px;
+  padding: 30px;
+
+  box-shadow: 4px 6px 18px 0px #000;
+  outline: solid #444 1px;
+  border-radius: 0px;
+  border: solid 21px #818182;
+
+  /* The following block adds a gradient to the borders */
+  -moz-border-image: -moz-linear-gradient(top left, #A9A8A8 0%, #323232 100%);
+  -webkit-border-image: -webkit-linear-gradient(top left, #A9A8A8 0%, #323232 100%);
+  border-image: linear-gradient(to bottom right, #A9A8A8 0%, #323232 100%);
+  border-image-slice: 1;
+
+}
+.jumbotron > h1 {
+  text-align: center;
+}
