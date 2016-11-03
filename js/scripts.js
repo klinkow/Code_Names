@@ -88,9 +88,9 @@ $(document).ready(function() {
     for (var i = 0; i < 25; i ++) {
       var locationVariable = "#box" + (i + 1) + " h1";
       var gameLocation = "#gameboard " + locationVariable;
-      var colorKey = "#spyboard " + locationVariable;
+      var colorKey = "#spyboard " + "#box" + (i + 1);
       $(gameLocation).text(dealtCards[i].name);
-      $(colorKey).text(dealtCards[i].color);
+      $(colorKey).addClass(dealtCards[i].color);
     }
   };
 
