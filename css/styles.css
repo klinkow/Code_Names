@@ -1,8 +1,8 @@
 .grid {
-}
-
-.cell {
-
+  height: 100px;
+  max-width: 100%;
+  margin: 10px;
+  background-color: #F5F1DE;
 }
 
 #turnIdentifier {
@@ -10,6 +10,26 @@
   height: 30px;
   background-color: #FF0000;
   margin: 0 auto;
+}
+
+#spyboard {
+  margin-top: 100px;
+}
+
+.red {
+  background-color: #ff0000
+}
+
+.blue {
+  background-color: blue;
+}
+
+.bystander {
+  background-color: #F5F1DE;
+}
+
+.assassin {
+  background-color: #000;
 }
 
 /* IMPORTED STYLESHEET */
