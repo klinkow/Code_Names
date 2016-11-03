@@ -1,8 +1,8 @@
 .grid {
-}
-
-.cell {
-
+  height: 100px;
+  max-width: 100%;
+  margin: 10px;
+  background-color: #F5F1DE;
 }
 
 #turnIdentifier {
@@ -11,6 +11,11 @@
   background-color: #FF0000;
   margin: 0 auto;
 }
+
+#spyboard {
+  margin-top: 100px;
+}
+
 
 /* IMPORTED STYLESHEET */
 

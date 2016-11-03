@@ -77,33 +77,28 @@ function dealCards(){
 
 }
 
-function startGame() {
-  dealCards();
-}
-
+// function startGame() {
+//   dealCards();
+// }
 
 // FRONT-END
 
-
 $(document).ready(function() {
+  function layout() {
+    for (var i = 0; i < 25; i ++) {
+      var locationVariable = "#box" + (i + 1) + " h1";
+      var gameLocation = "#gameboard " + locationVariable;
+      var colorKey = "#spyboard " + locationVariable;
+      $(gameLocation).text(dealtCards[i].name);
+      $(colorKey).text(dealtCards[i].color);
+    }
+  };
+
   $("button#start").click(function() {
-    startGame();
+    dealCards();
     layout();
   })
 });
-
-
-function layout() {
-  for (var i = 0; i < 25; i ++) {
-    var locationVariable = "#box" + (i + 1) + " h1";
-    $(locationVariable).text(dealtCards[i].name);
-    // $(locationVariable).text(dealtCards[i].color);
-  }
-};
-
-
-
-
 
 
 //
