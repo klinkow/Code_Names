@@ -89,8 +89,12 @@ $(document).ready(function() {
       var locationVariable = "#box" + (i + 1) + " h1";
       var gameLocation = "#gameboard " + locationVariable;
       var colorKey = "#spyboard " + "#box" + (i + 1);
+      var currentObject = dealtCards[i];
       $(gameLocation).text(dealtCards[i].name);
       $(colorKey).addClass(dealtCards[i].color);
+      $(locationVariable).click(function(event) {
+        $(this).css("background-color", currentObject.color);
+      });
     }
   };
 
@@ -98,7 +102,22 @@ $(document).ready(function() {
     dealCards();
     layout();
     $("#buttn").toggle();
-  })
+
+  });
+
+  for (var z = 1; z < 26; z++) {
+
+
+
+    // $("#box"+ z).click(function() {
+    //   var num = z;
+    //   console.log("this");
+    //   $(this).css("background-color", dealtCards[3].color);
+    // });
+
+  }
+
+
 });
 
 
