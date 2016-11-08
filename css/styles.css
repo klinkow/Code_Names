@@ -2,13 +2,12 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-
 .grid {
   height: 75px;
   max-width: 100%;
   margin: 10px;
   padding: 0;
-  background-color: #F5F1DE;
+  background-color: #E3E3E3;
   ;
 }
 
