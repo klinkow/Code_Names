@@ -1,8 +1,14 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .grid {
-  height: 100px;
+  height: 75px;
   max-width: 100%;
   margin: 10px;
+  padding: 0;
   background-color: #F5F1DE;
+  ;
 }
 
 #turnIdentifier {
@@ -123,4 +129,36 @@
 }
 .jumbotron > h1 {
   text-align: center;
+}
+
+#button-row button {
+  display: inline-block;
+}
+
+.button-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.board-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+}
+
+#gameboard {
+  padding: 0;
+}
+
+.jumbotron {
+  padding: 0;
+}
+footer {
+  height: 200px;
+}
+
+.grid h1 {
+  font-size: 2rem;
 }
