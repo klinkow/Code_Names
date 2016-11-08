@@ -40,6 +40,10 @@ body {
   background-color: #000;
 }
 
+.bttn {
+  display: none;
+}
+
 /* IMPORTED STYLESHEET */
 
 .btn {

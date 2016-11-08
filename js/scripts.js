@@ -169,6 +169,7 @@ $(document).ready(function() {
     layout();
     $("button#start").toggle();
     $("#turnIdentifier").show();
+    $(".bttn").show();
   });
 
   $("button#endturn").click(function() {
@@ -182,6 +183,85 @@ $(document).ready(function() {
 
   $("button#reset").click(function () {
     location.reload();
+  });
+
+  $("#box1").click(function(event) {
+    $("#box1").css("background-color", dealtCards[0].color);
+  });
+  $("#box2").click(function(event) {
+    $("#box2").css("background-color", dealtCards[1].color);
+  });
+  $("#box3").click(function(event) {
+    $("#box3").css("background-color", dealtCards[2].color);
+  });
+  $("#box4").click(function(event) {
+    $("#box4").css("background-color", dealtCards[3].color);
+  });
+  $("#box5").click(function(event) {
+    $("#box5").css("background-color", dealtCards[4].color);
+  });
+  $("#box6").click(function(event) {
+    $("#box6").css("background-color", dealtCards[5].color);
+  });
+  $("#box7").click(function(event) {
+    $("#box7").css("background-color", dealtCards[6].color);
+  });
+  $("#box8").click(function(event) {
+    $("#box8").css("background-color", dealtCards[7].color);
+  });
+  $("#box9").click(function(event) {
+    $("#box9").css("background-color", dealtCards[8].color);
+  });
+  $("#box10").click(function(event) {
+    $("#box10").css("background-color", dealtCards[9].color);
+  });
+  $("#box11").click(function(event) {
+    $("#box11").css("background-color", dealtCards[10].color);
+  });
+  $("#box12").click(function(event) {
+    $("#box12").css("background-color", dealtCards[11].color);
+  });
+  $("#box13").click(function(event) {
+    $("#box13").css("background-color", dealtCards[12].color);
+  });
+  $("#box14").click(function(event) {
+    $("#box14").css("background-color", dealtCards[13].color);
+  });
+  $("#box15").click(function(event) {
+    $("#box15").css("background-color", dealtCards[14].color);
+  });
+  $("#box16").click(function(event) {
+    $("#box16").css("background-color", dealtCards[15].color);
+  });
+  $("#box17").click(function(event) {
+    $("#box17").css("background-color", dealtCards[16].color);
+  });
+  $("#box18").click(function(event) {
+    $("#box18").css("background-color", dealtCards[17].color);
+  });
+  $("#box19").click(function(event) {
+    $("#box19").css("background-color", dealtCards[18].color);
+  });
+  $("#box20").click(function(event) {
+    $("#box20").css("background-color", dealtCards[19].color);
+  });
+  $("#box21").click(function(event) {
+    $("#box21").css("background-color", dealtCards[20].color);
+  });
+  $("#box22").click(function(event) {
+    $("#box22").css("background-color", dealtCards[21].color);
+  });
+  $("#box23").click(function(event) {
+    $("#box23").css("background-color", dealtCards[22].color);
+  });
+  $("#box24").click(function(event) {
+    $("#box24").css("background-color", dealtCards[23].color);
+  });
+  $("#box25").click(function(event) {
+    $("#box25").css("background-color", dealtCards[24].color);
+  });
+  $("#box26").click(function(event) {
+    $("#box26").css("background-color", dealtCards[25].color);
   });
 
 });
