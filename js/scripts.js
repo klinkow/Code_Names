@@ -3,14 +3,15 @@
 // var newCards = [];
 var randomNumber;
 var dealtCards = [];
+var randomTeam;
 // var team = new Team (INPUT, 0, 8 or 9, blue or red);
 
 
-function Team(name, correct, remaining, color) {
-  this.name = name;
+function Team(correct, remaining, color, active) {
   this.correct = correct;
   this.remaining = remaining;
   this.color = color;
+  this.active = active;
 }
 
 function Card (name, revealed, color, location) {
@@ -38,6 +39,54 @@ function shuffle(array) {
 
   return array;
 }
+
+function createTeams() {
+  var correct = 0;
+  var firstTeamRemainingCards = 9;
+  var secondTeamRemainingCards = 8;
+  var blue = "blue";
+  var red = "red";
+  var inactive = false;
+  var active = true;
+  var agent;
+
+  randomTeam = Math.floor(Math.random() * 2);
+
+  for (var i = 0; i < 2; i++)
+  {
+
+    if (randomTeam === 1)
+    {
+      agent = blue;
+      teamBlue = new Team (correct, firstTeamRemainingCards, blue, active);
+      teamRed = new Team (correct, secondTeamRemainingCards, red, inactive)
+    }
+    else
+    {
+      agent = red;
+      teamBlue = new Team (correct, secondTeamRemainingCards, blue, inactive);
+      teamRed = new Team (correct, firstTeamRemainingCards, red, active)
+    }
+  }
+}
+
+function switchActiveTeam() {
+  // Function that determines which team
+  // is currently active, then switches.
+  if (teamBlue.active === true)
+  {
+    teamBlue.active = false;
+    teamRed.active = true;
+    activeTeam = teamRed;
+  }
+  else if (teamRed.active === true)
+  {
+    teamRed.active = false;
+    teamBlue.active = true;
+    activeTeam = teamBlue;
+  }
+}
+
 
 function dealCards(){
   var cards = ["wind","fire","earth","witch","ketchup","snow","trunk","bow","degree","atlantis",
@@ -95,10 +144,15 @@ $(document).ready(function() {
   };
 
   $("button#start").click(function() {
+    createTeams();
     dealCards();
     layout();
-    $("#buttn").toggle();
+    $("button#start").toggle();
   })
+
+  $("button#endturn").click(function() {
+    switchActiveTeam();
+  });
 });
 
 
