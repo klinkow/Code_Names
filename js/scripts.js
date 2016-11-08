@@ -97,6 +97,7 @@ $(document).ready(function() {
   $("button#start").click(function() {
     dealCards();
     layout();
+    $("#buttn").toggle();
   })
 });
 
