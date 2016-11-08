@@ -4,12 +4,30 @@
     <title>Codenames</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <script src="js/jquery-3.1.1.js"></script>
     <script src="js/scripts.js"></script>
   </head>
   <body>
-    <div class = "jumbotron">
+
+  <div class="container">
+    <div class="jumbotron">
       <h1>Codenames</h1>
+    </div>
+  </div>
+
+    <div class="container">
+      <div class="row" id="button-row">
+        <div class="col-xs-12 button-row">
+          <button type="button" class="btn btn-gray" id="start">Start Game</button>
+
+          <button type="button" class="btn btn-gray" id="reset">Reset Game</button>
+
+          <button type="button" class="btn btn-gray" id="spyboardbutton">Spy Board Toggle</button>
+
+          <button type="button" class="btn btn-gray" id="endturn">End Turn</button>
+
+      </div>
     </div>
 
     <div class = "" id = "turnIdentifier">
@@ -17,97 +35,97 @@
     </div>
 
     <div class="container" id="gameboard">
-      <div class="row">
-        <div class="col-sm-2 grid" id="box1">
+      <div class="row board-row">
+        <div class="col-sm-2 text-center grid" id="box1">
           <!-- Card Object Here! -->
           <h1></h1>
         </div>
-        <div class="col-sm-2 grid" id="box2">
+        <div class="col-sm-2 text-center grid" id="box2">
           <h1></h1>
         </div>
-        <div class="col-sm-2 grid" id="box3">
+        <div class="col-sm-2 text-center grid" id="box3">
           <h1></h1>
         </div>
-        <div class="col-sm-2 grid" id="box4">
+        <div class="col-sm-2 text-center grid" id="box4">
           <h1></h1>
         </div>
-        <div class="col-sm-2 grid" id="box5">
+        <div class="col-sm-2 text-center grid" id="box5">
           <h1></h1>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-sm-2 grid" id="box6">
+      <div class="row board-row">
+        <div class="col-sm-2 text-center grid" id="box6">
           <!-- Card Object Here! -->
           <h1></h1>
         </div>
-        <div class="col-sm-2 grid" id="box7">
+        <div class="col-sm-2 text-center grid" id="box7">
           <h1></h1>
         </div>
-        <div class="col-sm-2 grid" id="box8">
+        <div class="col-sm-2 text-center grid" id="box8">
           <h1></h1>
         </div>
-        <div class="col-sm-2 grid" id="box9">
+        <div class="col-sm-2 text-center grid" id="box9">
           <h1></h1>
         </div>
-        <div class="col-sm-2 grid" id="box10">
+        <div class="col-sm-2 text-center grid" id="box10">
           <h1></h1>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-sm-2 grid" id="box11">
+      <div class="row board-row">
+        <div class="col-sm-2 text-center grid" id="box11">
           <!-- Card Object Here! -->
           <h1></h1>
         </div>
-        <div class="col-sm-2 grid" id="box12">
+        <div class="col-sm-2 text-center grid" id="box12">
           <h1></h1>
         </div>
-        <div class="col-sm-2 grid" id="box13">
+        <div class="col-sm-2 text-center grid" id="box13">
           <h1></h1>
         </div>
-        <div class="col-sm-2 grid" id="box14">
+        <div class="col-sm-2 text-center grid" id="box14">
           <h1></h1>
         </div>
-        <div class="col-sm-2 grid" id="box15">
+        <div class="col-sm-2 text-center grid" id="box15">
           <h1></h1>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-sm-2 grid" id="box16">
+      <div class="row board-row">
+        <div class="col-sm-2 text-center grid" id="box16">
           <!-- Card Object Here! -->
           <h1></h1>
         </div>
-        <div class="col-sm-2 grid" id="box17">
+        <div class="col-sm-2 text-center grid" id="box17">
           <h1></h1>
         </div>
-        <div class="col-sm-2 grid" id="box18">
+        <div class="col-sm-2 text-center grid" id="box18">
           <h1></h1>
         </div>
-        <div class="col-sm-2 grid" id="box19">
+        <div class="col-sm-2 text-center grid" id="box19">
           <h1></h1>
         </div>
-        <div class="col-sm-2 grid" id="box20">
+        <div class="col-sm-2 text-center grid" id="box20">
           <h1></h1>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-sm-2 grid" id="box21">
+      <div class="row board-row">
+        <div class="col-sm-2 text-center grid" id="box21">
           <!-- Card Object Here! -->
           <h1></h1>
         </div>
-        <div class="col-sm-2 grid" id="box22">
+        <div class="col-sm-2 text-center grid" id="box22">
           <h1></h1>
         </div>
-        <div class="col-sm-2 grid" id="box23">
+        <div class="col-sm-2 text-center grid" id="box23">
           <h1></h1>
         </div>
-        <div class="col-sm-2 grid" id="box24">
+        <div class="col-sm-2 text-center grid" id="box24">
           <h1></h1>
         </div>
-        <div class="col-sm-2 grid" id="box25">
+        <div class="col-sm-2 text-center grid" id="box25">
           <h1></h1>
         </div>
       </div>
@@ -115,7 +133,7 @@
     </div>
 
     <div class="container" id="spyboard">
-      <div class="row">
+      <div class="row board-row">
         <div class="col-sm-2 grid" id="box1">
           <!-- Card Object Here! -->
           <h1></h1>
@@ -134,7 +152,7 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row board-row">
         <div class="col-sm-2 grid" id="box6">
           <!-- Card Object Here! -->
           <h1></h1>
@@ -153,7 +171,7 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row board-row">
         <div class="col-sm-2 grid" id="box11">
           <!-- Card Object Here! -->
           <h1></h1>
@@ -172,7 +190,7 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row board-row">
         <div class="col-sm-2 grid" id="box16">
           <!-- Card Object Here! -->
           <h1></h1>
@@ -191,7 +209,7 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row board-row">
         <div class="col-sm-2 grid" id="box21">
           <!-- Card Object Here! -->
           <h1></h1>
@@ -212,9 +230,8 @@
 
     </div>
 
-    <div id="buttn">
-      <button type="button" class="btn btn-gray" id="start">Start Game!</button>
-    </div>
 
   </body>
+  <footer>
+  </footer>
 </html>
