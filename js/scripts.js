@@ -101,10 +101,12 @@ function dealCards(){
   "egypt","theater","berry","soldier","wall","pants","torch","state","conductor","dog",
   "foot","new york","stadium","dragon","bark","thief","racket","beijing","pie","knight"];
 
-  var cardColors = ["blue","blue","blue","blue","blue","blue","blue","blue",
+  var cardColors =
+  ["blue","blue","blue","blue","blue","blue","blue","blue",
   "red","red","red","red","red","red","red","red",
-  "bystander","bystander","bystander","bystander","bystander","bystander","bystander",
-  "assassin", "double agent"];
+  "#F5F1DE", "#F5F1DE", "#F5F1DE", "#F5F1DE",
+  "#F5F1DE", "#F5F1DE", "#F5F1DE", "#F5F1DE",
+  "#000",];
 
   var newCards = [];
   var revealed;
@@ -121,15 +123,9 @@ function dealCards(){
     location = "box" + (i + 1);
 
     dealtCards[i] = new Card (cardName, revealed, color, location);
-
-    // newCards[i].push("#box"+i);
   }
 
 }
-
-// function startGame() {
-//   dealCards();
-// }
 
 // FRONT-END
 
@@ -151,17 +147,18 @@ function endTurn() {
   };
 };
 
-$(document).ready(function() {
-  function layout() {
-    for (var i = 0; i < 25; i ++) {
-      var locationVariable = "#box" + (i + 1) + " h1";
-      var gameLocation = "#gameboard " + locationVariable;
-      var colorKey = "#spyboard " + "#box" + (i + 1);
-      $(gameLocation).text(dealtCards[i].name);
-      $(colorKey).addClass(dealtCards[i].color);
-    }
+function layout() {
+  for (var i = 0; i < 25; i ++) {
+    var locationVariable = "#box" + (i + 1) + " h1";
+    var gameLocation = "#gameboard " + locationVariable;
+    var colorKey = "#spyboard " + "#box" + (i + 1);
+    $(gameLocation).text(dealtCards[i].name);
+    // $(colorKey).addClass(dealtCards[i].color);
+    $(colorKey).css("background-color", dealtCards[i].color)
   }
+}
 
+$(document).ready(function() {
   $("button#start").click(function() {
     createTeams();
     firstTurn();
@@ -184,6 +181,15 @@ $(document).ready(function() {
   $("button#reset").click(function () {
     location.reload();
   });
+
+  // for (var i = 0; i < 25; i++)
+  // {
+  //   var locationVariable = "#box" + (i + 1) + " h1";
+  //   var gameLocation = "#gameboard " + locationVariable;
+  //   $(locationVariable).click(function(event) {
+  //     $(locationVariable).css("background-color", dealtCards[i].color);
+  //   });
+  // }
 
   $("#box1").click(function(event) {
     $("#box1").css("background-color", dealtCards[0].color);
@@ -260,9 +266,7 @@ $(document).ready(function() {
   $("#box25").click(function(event) {
     $("#box25").css("background-color", dealtCards[24].color);
   });
-  $("#box26").click(function(event) {
-    $("#box26").css("background-color", dealtCards[25].color);
-  });
+
 
 });
 
