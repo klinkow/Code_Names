@@ -17,6 +17,7 @@ body {
   height: 30px;
   background-color: #FF0000;
   margin: 0 auto;
+  display: none;
 }
 
 #spyboard {
@@ -28,7 +29,7 @@ body {
 }
 
 .blue {
-  background-color: blue;
+  background-color: #0000ff;
 }
 
 .bystander {
@@ -151,6 +152,10 @@ body {
 
 #gameboard {
   padding: 0;
+}
+
+#spyboard {
+  display: none;
 }
 
 .jumbotron {

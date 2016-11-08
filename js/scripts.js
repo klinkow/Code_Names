@@ -4,6 +4,9 @@
 var randomNumber;
 var dealtCards = [];
 var randomTeam;
+
+var teamBlue;
+var teamRed;
 // var team = new Team (INPUT, 0, 8 or 9, blue or red);
 
 
@@ -77,13 +80,11 @@ function switchActiveTeam() {
   {
     teamBlue.active = false;
     teamRed.active = true;
-    activeTeam = teamRed;
   }
   else if (teamRed.active === true)
   {
     teamRed.active = false;
     teamBlue.active = true;
-    activeTeam = teamBlue;
   }
 }
 
@@ -132,6 +133,24 @@ function dealCards(){
 
 // FRONT-END
 
+function firstTurn() {
+  var teamColor = document.getElementById("turnIdentifier")
+  if (randomTeam === 1) {
+    $(teamColor).css("background-color", "blue");
+  } else {
+    $(teamColor).css("background-color", "red");
+  };
+};
+
+function endTurn() {
+  var teamColor = document.getElementById("turnIdentifier")
+  if (teamBlue.active === true) {
+    $(teamColor).css("background-color", "red");
+  } else {
+    $(teamColor).css("background-color", "blue");
+  };
+};
+
 $(document).ready(function() {
   function layout() {
     for (var i = 0; i < 25; i ++) {
@@ -141,18 +160,30 @@ $(document).ready(function() {
       $(gameLocation).text(dealtCards[i].name);
       $(colorKey).addClass(dealtCards[i].color);
     }
-  };
+  }
 
   $("button#start").click(function() {
     createTeams();
+    firstTurn();
     dealCards();
     layout();
     $("button#start").toggle();
-  })
+    $("#turnIdentifier").show();
+  });
 
   $("button#endturn").click(function() {
+    endTurn();
     switchActiveTeam();
   });
+
+  $("button#spyboardbutton").click(function () {
+    $("#spyboard").toggle();
+  });
+
+  $("button#reset").click(function () {
+    location.reload();
+  });
+
 });
 
 
