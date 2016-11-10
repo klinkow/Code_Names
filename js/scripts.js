@@ -88,6 +88,17 @@ function switchActiveTeam() {
   }
 }
 
+function createDoubleAgent (array) {
+  if (randomTeam ===  1)
+  {
+    color = "blue";
+  }
+  else
+  {
+    color = "red";
+  }
+  array.push(color);
+}
 
 function dealCards(){
   var cards = ["wind","fire","earth","witch","ketchup","snow","trunk","bow","degree","atlantis",
@@ -105,7 +116,7 @@ function dealCards(){
   ["blue","blue","blue","blue","blue","blue","blue","blue",
   "red","red","red","red","red","red","red","red",
   "#F5F1DE", "#F5F1DE", "#F5F1DE", "#F5F1DE",
-  "#F5F1DE", "#F5F1DE", "#F5F1DE", "#F5F1DE",
+  "#F5F1DE", "#F5F1DE", "#F5F1DE",
   "#000",];
 
   var newCards = [];
@@ -115,6 +126,7 @@ function dealCards(){
 
   newCards = shuffle(cards);
   newColors = shuffle(cardColors);
+  createDoubleAgent(cardColors);
 
   for (var i = 0; i < 25; i ++) {
     cardName = newCards[i];
@@ -124,7 +136,6 @@ function dealCards(){
 
     dealtCards[i] = new Card (cardName, revealed, color, location);
   }
-
 }
 
 // FRONT-END
@@ -185,11 +196,16 @@ $(document).ready(function() {
   // for (var i = 0; i < 25; i++)
   // {
   //   var locationVariable = "#box" + (i + 1) + " h1";
-  //   var gameLocation = "#gameboard " + locationVariable;
   //   $(locationVariable).click(function(event) {
   //     $(locationVariable).css("background-color", dealtCards[i].color);
   //   });
   // }
+  $("button#rules-display").click(function(event) {
+      event.preventDefault();
+      $("#rulesPopup").slideToggle(1000, function() {
+        $("#rulePopup h1, #rulespopup ol").toggle();
+      });
+  });
 
   $("#box1").click(function(event) {
     $("#box1").css("background-color", dealtCards[0].color);

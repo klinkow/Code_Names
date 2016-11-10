@@ -10,6 +10,24 @@
   </head>
   <body>
 
+  <div class="">
+    <div class="row" id="rulesPopup">
+        <div class="col-sm-4" id="">
+          <h1 class="text-uppercase">Rules of the Game:</h1>
+        </div>
+        <div class="col-sm-7" id="">
+          <ol class="listrules">
+            <li>TEAMS: Each team is comprised of agents and spymasters.  There is one spymaster for each of two teams.</li>
+            <li>BOARD: The board is made up of 25 words which are randomly selected.  Each word is associated with a color.  Blue words represent agents of the blue team, while red words are red agents. Their are additionally seven bystanders on the board, along with the dreaded assassin.  Finally, the double agent represents the extra red or blue word given to the starting team.</li>
+            <li>The spymaster issues clues to their team, in the hopes that they will guess the related codenames.</li>
+            <li>CLUES: Clues are made up of a single word (related to those the spymaster wants their team to guess), and an integer indicating how many cards the team is meant to guess.</li>
+            <li>GUESSING: Guesses are made by clicking on the word.  Once a guess is made, it cannot be taken back, as the color of the card is immediately revealed. If players guess a card other than their own color, their turn ends and they cannot guess anymore cards.  When players have guessed the number of cards their spymaster intended, they are afforded an extra guess, in case they have ideas from previous clues.</li><br>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="container">
     <div class="jumbotron">
       <h1>Codenames</h1>
@@ -29,7 +47,9 @@
           <div class="bttn">
             <button type="button" class="btn btn-gray" id="reset">Reset Game</button>
 
-            <button type="button" class="btn btn-gray" id="spyboardbutton">Spy Board Toggle</button>
+            <button type="button" id="rules-display" class="btn btn-gray">Display Rules</button>
+
+            <button type="button" class="btn btn-gray" id="spyboardbutton">Toggle Color Key</button>
 
             <button type="button" class="btn btn-gray" id="endturn">End Turn</button>
           </div>
